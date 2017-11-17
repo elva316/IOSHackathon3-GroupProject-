@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zOy-q1-ZYa">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gnX-lx-AfO">
+            <objects>
+                <viewController id="zOy-q1-ZYa" customClass="ViewController" customModule="YouTubeNow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bC7-2r-vBR">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="Vew-Xg-oub">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X2o-zC-nRO" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="20" y="20" width="627" height="62"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.93864983320236206" green="0.9327358603477478" blue="0.028889039531350136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="Wbk-6T-fUe"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="YouTube NOW">
+                                        <attributes>
+                                            <color key="NSColor" red="0.94659334421157837" green="0.044564949369501526" blue="0.16644374502189752" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="51" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.boarder">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cs9-9r-lrW" customClass="GIDSignInButton">
+                                <rect key="frame" x="267" y="289" width="133" height="57"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="HF9-ZG-JTu"/>
+                                    <constraint firstAttribute="height" constant="57" id="tFK-I5-38R"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="signInButton:" destination="UIy-hi-gkd" eventType="valueChanged" id="zwl-kD-jOD"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vew-Xg-oub" firstAttribute="top" secondItem="RtW-03-HEk" secondAttribute="top" id="FBC-hO-9O4"/>
+                            <constraint firstItem="Vew-Xg-oub" firstAttribute="leading" secondItem="bC7-2r-vBR" secondAttribute="leading" id="MVP-74-cwe"/>
+                            <constraint firstItem="Vew-Xg-oub" firstAttribute="bottom" secondItem="RtW-03-HEk" secondAttribute="bottom" id="Rh5-8y-GOc"/>
+                            <constraint firstItem="X2o-zC-nRO" firstAttribute="top" secondItem="RtW-03-HEk" secondAttribute="top" constant="20" id="VhJ-tS-jlu"/>
+                            <constraint firstAttribute="trailing" secondItem="Vew-Xg-oub" secondAttribute="trailing" id="Yr9-cl-3jZ"/>
+                            <constraint firstItem="X2o-zC-nRO" firstAttribute="centerX" secondItem="Vew-Xg-oub" secondAttribute="centerX" id="iZj-fs-x0x"/>
+                            <constraint firstItem="X2o-zC-nRO" firstAttribute="leading" secondItem="RtW-03-HEk" secondAttribute="leading" constant="20" id="jbp-7c-Tp4"/>
+                            <constraint firstItem="cs9-9r-lrW" firstAttribute="centerX" secondItem="bC7-2r-vBR" secondAttribute="centerX" id="tfc-ai-GsO"/>
+                            <constraint firstItem="cs9-9r-lrW" firstAttribute="centerY" secondItem="bC7-2r-vBR" secondAttribute="centerY" constant="130" id="yBt-T7-wft"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RtW-03-HEk"/>
+                    </view>
+                    <connections>
+                        <outlet property="signInButton" destination="cs9-9r-lrW" id="ave-it-BUU"/>
+                        <segue destination="qgO-Ve-eBf" kind="presentation" identifier="toWatchLater" id="S19-LT-GJL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ToK-LF-BE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UIy-hi-gkd" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-122.78860569715144" y="-88.799999999999997"/>
+        </scene>
+        <!--Video Controller-->
+        <scene sceneID="Uc5-Cr-PCp">
+            <objects>
+                <viewController id="qgO-Ve-eBf" customClass="VideoController" customModule="YouTubeNow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4GI-FR-AgN">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="pBn-Ho-cnB">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOn-ln-WiK">
+                                <rect key="frame" x="20" y="20" width="627" height="277"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5V-Xh-dh3">
+                                <rect key="frame" x="54" y="305" width="562" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.99953407049179077" green="0.84096848428069237" blue="0.29154632042816514" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vIv-h4-Bec" kind="unwind" unwindAction="logout:" id="4EL-49-N2e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hOn-ln-WiK" firstAttribute="trailing" secondItem="N5V-Xh-dh3" secondAttribute="trailing" constant="31" id="2rp-zu-DSb"/>
+                            <constraint firstAttribute="trailing" secondItem="pBn-Ho-cnB" secondAttribute="trailing" id="3g9-hu-aN6"/>
+                            <constraint firstItem="2sm-jZ-EVH" firstAttribute="trailing" secondItem="hOn-ln-WiK" secondAttribute="trailing" constant="20" id="9bc-zt-L6c"/>
+                            <constraint firstItem="hOn-ln-WiK" firstAttribute="leading" secondItem="N5V-Xh-dh3" secondAttribute="leading" constant="-34" id="Fz4-c2-gIS"/>
+                            <constraint firstItem="hOn-ln-WiK" firstAttribute="leading" secondItem="2sm-jZ-EVH" secondAttribute="leading" constant="20" id="NNu-V9-ZWj"/>
+                            <constraint firstItem="pBn-Ho-cnB" firstAttribute="leading" secondItem="4GI-FR-AgN" secondAttribute="leading" id="NnF-j7-liM"/>
+                            <constraint firstItem="hOn-ln-WiK" firstAttribute="top" secondItem="4GI-FR-AgN" secondAttribute="top" constant="20" symbolic="YES" id="OAw-qk-Vbs"/>
+                            <constraint firstItem="2sm-jZ-EVH" firstAttribute="bottom" secondItem="N5V-Xh-dh3" secondAttribute="bottom" constant="18" id="Vu6-PV-kN6"/>
+                            <constraint firstItem="N5V-Xh-dh3" firstAttribute="top" secondItem="hOn-ln-WiK" secondAttribute="bottom" constant="8" symbolic="YES" id="YWr-4h-inh"/>
+                            <constraint firstItem="pBn-Ho-cnB" firstAttribute="bottom" secondItem="2sm-jZ-EVH" secondAttribute="bottom" id="ewk-R8-mjY"/>
+                            <constraint firstItem="pBn-Ho-cnB" firstAttribute="top" secondItem="2sm-jZ-EVH" secondAttribute="top" id="whH-jD-xyJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2sm-jZ-EVH"/>
+                    </view>
+                    <connections>
+                        <outlet property="myVideo" destination="hOn-ln-WiK" id="oGt-L7-QH8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="46N-pu-vyq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vIv-h4-Bec" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="535.68215892053979" y="-90.400000000000006"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="images" width="259" height="194"/>
+    </resources>
+</document>
